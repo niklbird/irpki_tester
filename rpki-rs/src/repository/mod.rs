@@ -1,0 +1,35 @@
+//! Processing the content of RPKI repositories.
+//!
+//! This module contains types and procedures to parse and verify as well as
+//! create all the objects that can appear in an RPKI repository.
+
+#![cfg(feature = "repository")]
+
+//--- Re-exports
+//
+pub use self::cert::{Cert, ResourceCert};
+pub use self::crl::Crl;
+pub use self::manifest::Manifest;
+pub use self::roa::Roa;
+pub use self::rta::Rta;
+pub use self::tal::Tal;
+
+//--- Modules
+//
+pub mod aspa;
+pub mod cert;
+pub mod crl;
+pub mod error;
+pub mod iroa;
+pub mod imanifest;
+pub mod resources;
+pub mod roa;
+pub mod rpkiobj;
+pub mod rta;
+pub mod sigobj;
+pub mod tal;
+pub mod x509;
+pub mod manifest;
+pub mod isigobj;
+pub mod icrl;
+pub mod pmanifest;
